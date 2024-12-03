@@ -1,0 +1,21 @@
+.status {
+    font-weight: bold;
+}
+
+.status-waiting {
+    color: #ffc107; /* Желтый */
+}
+
+.status-in-transit {
+    color: #0d6efd; /* Синий */
+}
+
+.status-delivered {
+    color: #198754; /* Зеленый */
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
