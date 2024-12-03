@@ -1,9 +1,5 @@
-// table.js
-// Отображает таблицу грузов
-
 import {statuses} from "../services/cargoService.js";
 
-// Функция для получения класса на основе статуса
 function getStatusClass(status) {
     switch (status) {
         case "Ожидает отправки":
@@ -39,7 +35,6 @@ export function createTable(cargoList, onStatusChange) {
     cargoList.forEach((cargo) => {
         const row = document.createElement("tr");
 
-        // Получаем класс статуса для изменения цвета
         const statusClass = getStatusClass(cargo.status);
 
         row.innerHTML = `
@@ -61,13 +56,11 @@ export function createTable(cargoList, onStatusChange) {
         tbody.appendChild(row);
     });
 
-    // Добавляем обработчик изменения статуса
     tbody.addEventListener("change", (e) => {
         const select = e.target;
         const id = select.getAttribute("data-id");
         const newStatus = select.value;
 
-        // Обновляем класс для нового статуса
         select.className = `form-select ${getStatusClass(newStatus)}`;
 
         onStatusChange(id, newStatus);

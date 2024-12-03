@@ -1,6 +1,3 @@
-// app.js
-// Точка входа приложения
-
 import {cargoList} from "./services/cargoService.js";
 import {createTable} from "./components/table.js";
 import {createForm} from "./components/form.js";
@@ -40,7 +37,6 @@ function onFilterChange(status) {
     render();
 }
 
-// Рендеринг компонентов
 document.getElementById("filter-container").appendChild(createFilter(onFilterChange));
 document.getElementById("form-container").appendChild(createForm(onFormSubmit));
 render();

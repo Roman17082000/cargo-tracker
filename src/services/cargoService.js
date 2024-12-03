@@ -1,6 +1,3 @@
-// cargoService.js
-// Управляет данными о грузах
-
 export const cargoList = [
     {
         id: "CARGO001",

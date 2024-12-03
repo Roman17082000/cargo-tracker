@@ -1,6 +1,3 @@
-// filter.js
-// Фильтр по статусу груза
-
 import {statuses} from "../services/cargoService.js";
 
 export function createFilter(onFilterChange) {

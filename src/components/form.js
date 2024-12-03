@@ -1,6 +1,3 @@
-// form.js
-// Форма добавления нового груза
-
 import {cities, statuses} from "../services/cargoService.js";
 
 export function createForm(onSubmit) {
